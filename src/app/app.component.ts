@@ -16,5 +16,4 @@ import { inject } from '@angular/core';
 export class AppComponent {
   title = 'testingAngular';
   PointCounterService = inject(PointCounterService);
-  points = PointCounterService.prototype.sendPoints;
 }
