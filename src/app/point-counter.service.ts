@@ -4,11 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PointCounterService {
-  private points :number = 0;
+  points : number = 0;
 
   constructor() { }
 
-  public get sendPoints() { return this.points;};
+  public increment() {
+    this.points++;
+  };
 
-  public set changePoints(newPoints : any) { this.points = newPoints;};
+  public decrement(){
+    this.points--;
+  };
 }
