@@ -13,11 +13,9 @@ import { inject } from '@angular/core';
 export class DecrementButtonComponent {
 
   PointCounterService = inject(PointCounterService);
-  localPoints = PointCounterService.prototype.sendPoints;
 
   decrementScore() {
-    this.localPoints--;
-    this.PointCounterService.changePoints(this.localPoints);
+    this.PointCounterService.decrement();
   }
 
 }
